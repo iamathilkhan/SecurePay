@@ -1,8 +1,11 @@
 {% extends "base.html" %}
+{% block title %} Verify Face {% endblock %}
 {% block content %}
-<h1>Face Upload</h1>
-<form action="/verify/face" method="post" enctype="multipart/form-data">
-    <input type="file" name="face_image">
-    <button type="submit">Upload</button>
-</form>
+<div class="get_face">
+    <h1 class="title">Face Recognition</h1>
+    <form action="/verify/face" method="post" class="face" enctype="multipart/form-data">
+        <input type="file" name="face"><br>
+        <button type="submit">Upload</button>
+    </form>
+</div>
 {% endblock %}

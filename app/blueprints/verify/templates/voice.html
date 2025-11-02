@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Voice{% endblock %}
+{% block content %}
+<div class="get_voice">
+    <h1 class="title">Voice Recognition</h1>
+    <form action="/verify/face" method="post" class="voice" enctype="multipart/form-data">
+        <input type="file" name="voice"><br>
+        <button type="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}

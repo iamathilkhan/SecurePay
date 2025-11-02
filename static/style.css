@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.get_face, .get_voice {
+    background: white;
+    padding: 3rem 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.get_face:hover , .get_voice{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.face input[type="file"] {
+    display: block;
+    margin: 1rem auto 2rem auto;
+    border: 2px dashed #c9ccd1;
+    border-radius: 10px;
+    padding: 1.2rem;
+    background: #fafbfc;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.face, .voice input[type="file"]:hover {
+    border-color: #7f8cff;
+    background: #f0f2ff;
+}
+
+.face , .voice button {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.face, .voice button:hover {
+    background: #3b3b3b;
+    transform: translateY(-2px);
+}
