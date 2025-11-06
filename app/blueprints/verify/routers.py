@@ -4,7 +4,7 @@ from . import verify_bp
 
 @verify_bp.route('/')
 def verify():
-    return render_template('/verify/voice.html' )
+    return render_template('/verify/face.html' )
 
 @verify_bp.route('/face', methods = ['POST'])
 def face():
