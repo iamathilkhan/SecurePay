@@ -14,11 +14,6 @@
     transition: all 0.3s ease;
 }
 
-.get_face:hover , .get_voice{
-    transform: translateY(-4px);
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
-}
-
 .title {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -26,7 +21,7 @@
     font-weight: 600;
 }
 
-.face input[type="file"] {
+.face input, .voice  input[type="file"] {
     display: block;
     margin: 1rem auto 2rem auto;
     border: 2px dashed #c9ccd1;
@@ -38,12 +33,12 @@
     transition: border-color 0.3s ease, background 0.3s ease;
 }
 
-.face, .voice input[type="file"]:hover {
+.face input, .voice input[type="file"]:hover {
     border-color: #7f8cff;
     background: #f0f2ff;
 }
 
-.face , .voice button {
+.face button, .voice button {
     background: #1a1a1a;
     color: white;
     border: none;
@@ -54,7 +49,7 @@
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.face, .voice button:hover {
+.face button:hover, .voice button:hover {
     background: #3b3b3b;
     transform: translateY(-2px);
 }
