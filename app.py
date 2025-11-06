@@ -1,5 +1,6 @@
 from app.blueprints.verify import verify_bp
 from app.blueprints.wallet import wallet_bp
+from app.blueprints.auth import auth_bp
 from flask import Flask, render_template
 
 def create_app():
@@ -11,7 +12,7 @@ def create_app():
 
     app.register_blueprint(verify_bp, url_prefix='/verify')
     app.register_blueprint(wallet_bp, url_prefix='/wallet')
-    app.register_blueprint()
+    app.register_blueprint(auth_bp, url_prefix='/auth')
 
     return app
 

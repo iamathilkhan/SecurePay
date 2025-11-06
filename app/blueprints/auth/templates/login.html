@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="get_login">
+    <h1 class="title">Login</h1>
+
+    <form method="post" action="#" class="login-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit">Sign In</button>
+    </form>
+
+    <p class="alt-link">
+        Don’t have an account? <a href="#">Sign up</a>
+    </p>
+</div>
+
+<style>
+.get_login {
+    background: white;
+    padding: 3rem 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    max-width: 400px;
+    margin: 100px auto;
+}
+
+.get_login:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.login-form label {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+}
+
+.login-form input {
+    width: 100%;
+    border: 2px dashed #c9ccd1;
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fafbfc;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #7f8cff;
+    background: #f0f2ff;
+}
+
+.login-form button {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.login-form button:hover {
+    background: #3b3b3b;
+    transform: translateY(-2px);
+}
+
+.alt-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.alt-link a {
+    color: #7f8cff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.alt-link a:hover {
+    text-decoration: underline;
+}
+</style>
+{% endblock %}
