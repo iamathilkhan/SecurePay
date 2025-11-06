@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}Check Balance{% endblock %}
+
+{% block content %}
+<div class="balance-container">
+    <h1 class="page-title">Your Balance</h1>
+    <div class="balance-box">
+            <p class="balance-amount">₹20,000</p>
+    </div>
+    <form method="post" action="/wallet/balance" class="balance-form">
+        <button type="submit" class="refresh-btn">Refresh Balance</button>
+    </form>
+</div>
+<style>
+.get_balance {
+    background: white;
+    padding: 3rem 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    max-width: 420px;
+    margin: 100px auto;
+}
+
+.get_balance:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.balance-box {
+    border: 2px dashed #c9ccd1;
+    background: #fafbfc;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.balance-box:hover {
+    border-color: #7f8cff;
+    background: #f0f2ff;
+}
+
+.balance-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+}
+
+.no-balance {
+    font-size: 1rem;
+    color: #888;
+}
+
+.get_balance button {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 0.9rem 2.5rem;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.get_balance button:hover {
+    background: #3b3b3b;
+    transform: translateY(-2px);
+}
+</style>
+{% endblock %}
