@@ -1,4 +1,84 @@
 {% extends 'base.html' %}
-{% block title %}Balance{% endblock %}
+{% block title %}Dashboard{% endblock %}
+
 {% block content %}
+<div class="main-balance-page">
+    <h1 class="title">Welcome</h1>
+    <p class="subtitle">Choose an action below</p>
+
+    <div class="options">
+        <a href="#" class="option-card">
+            <h2>Check Balance</h2>
+            <p>View your current account balance instantly.</p>
+        </a>
+
+        <a href="#" class="option-card">
+            <h2>Transfer Money</h2>
+            <p>Send funds securely to another account.</p>
+        </a>
+    </div>
+</div>
+
+<style>
+.main-balance-page {
+    max-width: 600px;
+    margin: 100px auto;
+    background: white;
+    padding: 3rem 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.main-balance-page:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.option-card {
+    background: #fafbfc;
+    border: 2px dashed #c9ccd1;
+    border-radius: 1rem;
+    padding: 1.8rem 1.5rem;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.option-card:hover {
+    border-color: #7f8cff;
+    background: #f0f2ff;
+    transform: translateY(-4px);
+}
+
+.option-card h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.option-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+</style>
 {% endblock %}

@@ -3,4 +3,4 @@ from . import wallet_bp
 
 @wallet_bp.route('/')
 def wallet():
-    return render_template('/balance.html' )
+    return render_template('/transfer.html' )
