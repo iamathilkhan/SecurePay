@@ -2,26 +2,26 @@ from .blueprints.verify import verify_bp
 from .blueprints.wallet import wallet_bp
 from .blueprints.auth import auth_bp
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+from .extension import db
+
 
 def create_app():
     app = Flask(__name__)
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Users'
+    # Simple local sqlite file; move to `config.py` or ENV for production
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Users.db'
 
-    db = SQLAlchemy(app=app)
+    # Initialize extensions
+    db.init_app(app)
 
-    class Users(db.Model):
-        id = db.Column(db.Integer, primary_key = True)
-        name = db.Column(db.String, nullable = False)
-        email = db.Column(db.String, nullable = False)
-
-        def __repr__(self):
-            return '<Name %r>'% self.name
+    @app.route('/login')
+    def login():
+        # blueprint-local template will be found by Flask's loader
+        return render_template('login.html')
 
     @app.route('/')
     def home():
-        return render_template('/base.html')
+        return render_template('base.html')
 
     app.register_blueprint(verify_bp, url_prefix='/verify')
     app.register_blueprint(wallet_bp, url_prefix='/wallet')
