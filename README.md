@@ -177,7 +177,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Email**: your.email@example.com
 - **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- **GitHub**: [Your GitHub](https://[github.com/yourusername](https://github.com/iamathilkhan))
+- **GitHub**: [Your GitHub](https://https://github.com/iamathilkhan)
 
 Feel free to reach out for collaborations, questions, or opportunities!
 
