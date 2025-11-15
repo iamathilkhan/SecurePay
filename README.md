@@ -175,7 +175,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Your Name**  
 *Full-Stack Developer | AI/ML Engineer | Cybersecurity Enthusiast*
 
-- **Email**: your.email@example.com
+- **Email**: athilkhan2005@gmail.com
 - **LinkedIn**: [Your LinkedIn](https://www.linkedin.com/in/ahamed-athil-khan/)
 - **GitHub**: [Your GitHub](https://github.com/iamathilkhan)
 
