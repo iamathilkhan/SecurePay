@@ -8,15 +8,12 @@ from .extension import db
 def create_app():
     app = Flask(__name__)
 
-    # Simple local sqlite file; move to `config.py` or ENV for production
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Users.db'
 
-    # Initialize extensions
     db.init_app(app)
 
     @app.route('/login')
     def login():
-        # blueprint-local template will be found by Flask's loader
         return render_template('login.html')
 
     @app.route('/')
