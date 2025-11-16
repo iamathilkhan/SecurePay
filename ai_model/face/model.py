@@ -1,21 +1,20 @@
-import cv2
+import face_recognition
+import warnings
 
-alg = "haarcascade_frontalface_default.xml"
-model = cv2.CascadeClassifier(alg)
+warnings.filterwarnings("ignore", category=UserWarning)
 
-img = cv2.imread("./detect.jpg", cv2.IMREAD_GRAYSCALE)
+def face_register(img):
+    image = face_recognition.load_image_file(img)
+    face_landmarks_list = face_recognition.face_landmarks(image)
+    if not face_landmarks_list:
+        print("No faces detected!")
+    else:
+        print("Detected")
 
-faces = model.detectMultiScale(
-    img,
-    scaleFactor=1.05,
-    minNeighbors=2,
-    minSize=(100, 100)
-)
 
-for x, y, w, h in faces:
-    cropped_image = img[y : y + h, x : x + w]
-    target_file_name = 'face.jpg'
-    cv2.imwrite(
-        target_file_name,
-        cropped_image,
-    )
+def face_verify(imagev, image):
+
+    known_encoding = face_recognition.face_encodings(image)[0]
+    unknown_encoding = face_recognition.face_encodings(imagev)[0]
+
+    results = face_recognition.compare_faces([known_encoding], unknown_encoding)
