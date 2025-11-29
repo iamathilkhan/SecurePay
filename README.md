@@ -1,9 +1,9 @@
 # SecurePay
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-2.0+-lightgrey.svg)](https://flask.palletsprojects.com/)
+[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.0+-blue.svg)](https://flask.palletsprojects.com/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange.svg)](https://www.tensorflow.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/Build-Passing-green.svg)](https://github.com/yourusername/SecurePay/actions)
 
 SecurePay is a cutting-edge secure payment platform built with Flask and powered by AI/ML technologies. This project demonstrates advanced skills in full-stack web development, machine learning integration, and cybersecurity best practices. It features AI-driven biometric verification (face and voice recognition), real-time fraud detection, and a modular architecture designed for scalability and maintainability.
